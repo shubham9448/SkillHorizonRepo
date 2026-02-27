@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Student Report">
+        <div class="slds-p-around_medium slds-text-align_center">
+            <p>This is student report card</p>
+            <lightning-input label="Subject One" onchange={handleSubjectOneChange} type="number"></lightning-input>
+            <lightning-input label="Subject Two" onchange={handleSubjectTwoChange} type="number"></lightning-input>
+            <lightning-input label="Subject Three" onchange={handleSubjectThreeChange} type="number"></lightning-input>
+        </div>
+        <div class="slds-p-around_medium">
+            <div class="slds-grid slds-grid_align-center slds-gutters_small">
+                <div class="slds-col">
+                    <lightning-button label="Calculate Total" onclick={calculateTotal} variant="brand-outline"></lightning-button>
+                </div>
+                <div class="slds-col">
+                    <lightning-button label="Percentage & Division" onclick={calculatePercentageAndDivision} variant="brand-outline"></lightning-button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-p-around_medium slds-text-align_center">
+            <template if:true={totalMarks}>
+                <p><strong>Total Marks:</strong>{totalMarks}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

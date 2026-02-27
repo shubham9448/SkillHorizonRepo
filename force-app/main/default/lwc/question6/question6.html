@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Simple Calculator">
+        <div class="slds-p-around_medium">
+            <p>This is a simple calculator component</p>
+            <br/>
+            <lightning-input label="Enter Number One" onchange={handleNumber1Change} type="number"></lightning-input>
+            <lightning-input label="Enter Number Two" onchange={handleNumber2Change} type="number"></lightning-input>   
+        </div>
+        <div class="slds-p-around_medium">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-4 slds-align_absolute-center">
+                    <lightning-button label="Addition" type="button" variant="success" onclick={handleClick}></lightning-button>
+                </div>
+                <div class="slds-col slds-size_1-of-4 slds-align_absolute-center">
+                    <lightning-button label="Subtraction" type="button" variant="success" onclick={handleClick}></lightning-button>
+                </div>
+                <div class="slds-col slds-size_1-of-4 slds-align_absolute-center">
+                    <lightning-button label="Multiplication" type="button" variant="success" onclick={handleClick}></lightning-button>
+                </div>
+                <div class="slds-col slds-size_1-of-4 slds-align_absolute-center">
+                    <lightning-button label="Division" type="button" variant="success" onclick={handleClick}></lightning-button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-p-around_medium">
+            <template if:true={result}>
+                <p class="slds-p-around_medium">Result: {result}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
