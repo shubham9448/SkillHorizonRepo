@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Feet To Inch Convertor">
+        <div class="slds-p-around_medium"> 
+            <lightning-input label="Feet" onchange={handleFeetChange} placeholder="Enter value in feet"></lightning-input>
+            <lightning-input label="Inches" value={inches}></lightning-input>
+        </div>
+        <div class="slds-align_absolute-center slds-m-horizontal_xx-large">
+            <lightning-button label="Convert Feet to Inches" onclick={convertFeetToInches} type="button" variant="destructive"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Currency Converter">
+        <div class="slds-p-horizontal_medium slds-p-vertical_medium">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-combobox
+                        name="input"
+                        label="Input Currency"
+                        placeholder="Select the currency"
+                        options={options}
+                        onchange={handleChange}>
+                    </lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-combobox
+                        name="output"
+                        label="Output Currency"
+                        placeholder="Select the currency"
+                        options={options}
+                        onchange={handleChange}>
+                    </lightning-combobox>
+                </div>
+            </div>
+            <div class="slds-m-top_small">
+                <lightning-input type="number" label="Amount" onchange={handleChangeAmount}></lightning-input>
+            </div>
+        </div>
+        <template lwc:if={convertedAmount}>
+                <div class="slds-p-horizontal_medium slds-p-vertical_medium">
+                    <lightning-input type="number" label="Converted Amount" value={convertedAmount}></lightning-input>
+                </div>
+        </template>
+        <div class="slds-align_absolute-center">  
+            <lightning-button label="Convert" onclick={handleConvert} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>
