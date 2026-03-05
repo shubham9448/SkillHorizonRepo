@@ -1,0 +1,49 @@
+<template>
+    <lightning-card title="Bill Generator">
+        <div class="slds-p-around_medium ">
+            <div class="slds-grid slds-gutters_small">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Quantity of Apple" type="number" onchange={handleQuantityChange1}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Price of Apple" type="number" onchange={handlePriceChange1}></lightning-input>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters_small">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Quantity of Banana" type="number" onchange={handleQuantityChange2}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Price of Banana" type="number" onchange={handlePriceChange2}></lightning-input>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters_small">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Quantity of Orange" type="number" onchange={handleQuantityChange3}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Price of Orange" type="number" onchange={handlePriceChange3}></lightning-input>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters_small">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Quantity of Grapes" type="number" onchange={handleQuantityChange4}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Price of Grapes" type="number" onchange={handlePriceChange4}></lightning-input>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters_small">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Quantity of Watermelon" type="number" onchange={handleQuantityChange5}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Price of Watermelon" type="number" onchange={handlePriceChange5}></lightning-input>
+                </div>
+            </div>
+        </div>
+        <div class="slds-p-around_medium">
+            <lightning-button label="Calculate Total Bill" onclick={calculateTotalBill} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

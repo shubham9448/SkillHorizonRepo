@@ -1,12 +1,19 @@
 <template>
     <div>
-        <!--Button for New Position-->
-        <lightning-button style="margin-left: 800px" variant="brand" label="New Position" 
-        title="New Position" onclick={handleClickPos} class="slds-m-left_x-small">
-        </lightning-button>
-        <!--Button for New Candidate-->
-        <lightning-button style="margin-left: 800px" variant="brand" label="New Candidate" 
-        title="New Candidate" onclick={handleClickCan} class="slds-m-left_x-small">
-        </lightning-button>
+        <lightning-layout horizontal-align="spread" vertical-align="center" class="slds-p-around_medium">
+            <lightning-layout-item>
+                <!--Button for New Position-->
+                <lightning-button variant="brand" label="New Position" 
+                title="New Position" onclick={handleClickPos} >
+                </lightning-button>
+            </lightning-layout-item>
+            <!-- spacer removed since spread alignment handles placement -->
+            <lightning-layout-item>
+                <!--Button for New Candidate-->
+                <lightning-button variant="brand" label="New Candidate" 
+                title="New Candidate" onclick={handleClickCan} >
+                </lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>    
     </div>
 </template>

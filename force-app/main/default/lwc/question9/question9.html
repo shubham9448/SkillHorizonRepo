@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Select The Object">
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+                name="object"
+                label="Select Object"
+                placeholder="Select the object"
+                options={objectOptions}
+                onchange={handleObjectChange}>
+            </lightning-combobox>
+        </div>
+        <div class="slds-p-around_medium">
+            <template if:true={hasRecords}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={record}
+                    columns={Columns}>
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

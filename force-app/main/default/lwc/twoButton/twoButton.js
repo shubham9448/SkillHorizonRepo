@@ -6,7 +6,7 @@ export default class TwoButton extends NavigationMixin(LightningElement) {
         this[NavigationMixin.Navigate]({
             type: 'comm__namedPage',
             attributes:{
-                name: 'PositionCreation__c'
+                name: 'PositionCreate__c'
             }
         })
     }
@@ -16,7 +16,7 @@ export default class TwoButton extends NavigationMixin(LightningElement) {
         this[NavigationMixin.Navigate]({
             type: 'comm__namedPage',
             attributes:{
-                name: 'candidateCreation__c'
+                name: 'CandidateCreate__c'
             }
         })
     }

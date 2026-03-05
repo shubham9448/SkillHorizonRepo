@@ -5,7 +5,7 @@ export default class CandidateCreation extends LightningElement {
         const recordId = event.detail.Id;
         console.log('New Candidate Record ID: ',recordId);
         this[NavigationMixin.Navigate]({
-            type:'standard__recordPage',
+            type:'standard__webPage',
             attributes:{
                 recordId: event.detail.Id,
                 actionName: 'view'
