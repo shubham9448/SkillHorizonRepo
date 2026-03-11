@@ -399,7 +399,6 @@ public class AccountTriggerHandler {
         }
         if(!usList.isEmpty()){
             update usList;
-        }
-        
+        }    
     }
 }

@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Parent Component">
+        <div class="slds-p-around_small">
+            <lightning-input label="Full Name" value={fullName} onchange={handleChange}></lightning-input>
+            <c-child class="slds-p-" full-name={fullName}></c-child>
+        </div>
+    </lightning-card>
+</template>

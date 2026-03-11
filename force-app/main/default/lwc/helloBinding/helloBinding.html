@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Hello Binding">
+        <div class="slds-p-around_small">
+            <lightning-input label="First Name" name="firstName" value={firstName} onchange={handleChange}></lightning-input>
+            <lightning-input label="Last Name" name="lastName" value={lastName} onchange={handleChange}></lightning-input>
+            <p>Hello, {uppercaseFullName}</p>
+        </div>
+    </lightning-card>
+</template>

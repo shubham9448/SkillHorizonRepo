@@ -20,6 +20,10 @@ trigger OpportunityTrigger on Opportunity (before insert,before update,after ins
             OpportunityTriggerHandler.createProject(Trigger.new,null); //Assignment 2 Q1
             //OpportunityTriggerHandler.question35(Trigger.new,null);
             OpportunityTriggerHandler.question36(Trigger.new,null);
+            BatchApex3 ba = new BatchApex3();
+            Database.executeBatch(ba);
+            BatchApex4 bc = new BatchApex4();
+            Database.executeBatch(bc);
 
         }else if(Trigger.isUpdate){
             OpportunityTriggerHandler.createProject(Trigger.new,Trigger.oldMap); //Assignment 2 Q1
@@ -30,6 +34,8 @@ trigger OpportunityTrigger on Opportunity (before insert,before update,after ins
             }
             //OpportunityTriggerHandler.question35(Trigger.new,Trigger.oldMap);
             OpportunityTriggerHandler.question40(Trigger.new,Trigger.oldMap);
+            //BatchApex4 bc = new BatchApex4();
+            //Database.executeBatch(bc);
         }else if(Trigger.isDelete){
            // OpportunityTriggerHandler.question35(Trigger.old,null);
         }else if(Trigger.isUndelete){

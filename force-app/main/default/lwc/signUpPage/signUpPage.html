@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title = 'SIGN UP'>
+        <div class="slds-p-around_medium">
+            <lightning-input name="userName" type="text" label="User Name" value={userName} onchange={handleChange}></lightning-input>
+            <lightning-input name="firstName" type="text" label="First Name" value={firstName} onchange={handleChange}></lightning-input>
+            <lightning-input name="lastName" type="text" label="Last Name" value={lastName} onchange={handleChange}></lightning-input>
+            <lightning-input name="email" type="text" label="Email" value={email} onchange={handleChange}></lightning-input>
+            <lightning-input name="password" type="text" label="Password" value={password} onchange={handleChange}></lightning-input>
+        </div>
+    </lightning-card>
+</template>

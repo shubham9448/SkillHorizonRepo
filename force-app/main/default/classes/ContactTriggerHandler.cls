@@ -68,4 +68,24 @@ public class ContactTriggerHandler {
             }
         }
     }
+
+    @future
+    public static void futureCountNumberOfContact(Set<Id> accIds){
+        List<Account> accList = new List<Account>();
+        Map<Id,Integer> accMap = new Map<Id,Integer>();
+
+        List<AggregateResult> accAggregateResult = [SELECT AccountId,COUNT(Id) FROM Contact WHERE AccountId IN: accIds GROUP BY AccountId]; 
+    
+        for(AggregateResult ar:accAggregateResult){
+            accMap.put((Id)ar.get('AccountId'),(Integer)ar.get('expr0'));
+        }
+        if(!accMap.isEmpty()){
+            for(Id i:accMap.keySet()){
+                accList.add(new Account(Id=i,NumberOfContact__c = accMap.get(i)));
+            }
+        }
+        if(!accList.isEmpty()){
+            update accList;
+        }  
+    }
 }

@@ -4,6 +4,9 @@ if(Trigger.isAfter){
         CaseTriggerHandler.question7(Trigger.new);
         CaseTriggerHandler.question34(Trigger.new);
         CaseTriggerHandler.webCase(Trigger.new);
+
+        BatchApex2 ba = new BatchApex2();
+        Database.executeBatch(ba);
     }
 }
 }

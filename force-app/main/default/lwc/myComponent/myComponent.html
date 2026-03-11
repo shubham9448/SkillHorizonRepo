@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="JS Service Component">
+        <div class="slds-p-around_medium">
+            <lightning-input type="number" label="Principal" value={principal} onchange={handleChange}></lightning-input>
+            <lightning-input type="number" label="Years" value={years} onchange={handleChange}></lightning-input>
+            <lightning-input type="number" label="Rate" value={rate} onchange={handleChange}></lightning-input>
+            <lightning-button label="Calculate" onclick={myFunction} variable="brand"></lightning-button>
+            <div class="slds-p-around_medium">
+                <template for:each={valDefault} for:item="v">
+                <li key={v.id}>
+                    {v.label},{v.value}
+                </li>
+            </template>
+            </div>
+            Simple Interest is {val}
+        </div>
+    </lightning-card>
+</template>

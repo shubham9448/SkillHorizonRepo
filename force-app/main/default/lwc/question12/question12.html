@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Display Account Details">
+        <div class="slds-p-around_medium">
+
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+
+                <!-- Table Header -->
+                <thead>
+                    <tr>
+                        <th><strong>Name</strong></th>
+                        <th><strong>Industry</strong></th>
+                    </tr>
+                </thead>
+
+                <!-- Table Body -->
+                <tbody>
+                    <template for:each={accounts} for:item="account">
+                        <tr key={account.Id}>
+                            <td>{account.Name}</td>
+                            <td>{account.Industry}</td>
+                        </tr>
+                    </template>
+                </tbody>
+
+            </table>
+
+        </div>
+    </lightning-card>
+</template>

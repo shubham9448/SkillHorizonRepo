@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Display Personal Data">
+         <div class="slds-p-around_small">
+            <template for:each={details} for:item="record">
+                <p key={record.Id}>
+                    <strong>Name:</strong> {record.Name}<br/>
+                    <strong>Email:</strong> {record.Email}<br/>
+                    <strong>Phone:</strong> {record.Phone}<br/>
+                    <br/>
+                </p>
+            </template>
+         </div>
+    </lightning-card>
+</template>

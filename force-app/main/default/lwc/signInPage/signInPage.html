@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="SIGN IN">
+        <div class="slds-p-around_medium">
+            <div>
+                <lightning-input name="userName" type="text" label="User Name" value={userName} onchange={handleChange}></lightning-input>
+                <lightning-input name="password" type="password" label="Password" value={password} onchange={handleChange}></lightning-input>
+            </div>
+            <div>
+                <lightning-button label="Sign In" onclick={handleSignIn} variant="brand"></lightning-button>
+                <lightning-button label="Sign Up" onclick={handleSignUp} variant="neutral"></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

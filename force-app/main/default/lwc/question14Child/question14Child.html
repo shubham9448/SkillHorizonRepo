@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Voting Eligibility">
+        <div class="slds-p-around_medium">
+            <template lwc:if={eligible}>
+                <p>The user is able to vote</p>
+            </template>
+            <template lwc:else>
+                <p>The user is not able to vote</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

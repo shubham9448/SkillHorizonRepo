@@ -30,16 +30,18 @@ trigger AccountTrigger on Account (before insert,before update,before delete,aft
             AccountTriggerHandler.question6(Trigger.new);
             AccountTriggerHandler.question9(Trigger.new);
             //AccountTriggerHandler.recursionDemo(Trigger.new);
+            //QueueableApex1 qa = new QueueableApex1();
+            //System.enqueueJob(qa);
         }else if(Trigger.isUpdate){
             //AccountTriggerHandler.question14(Trigger.new,Trigger.oldMap);
             AccountTriggerHandler.question15(Trigger.new,Trigger.oldMap);
             //AccountTriggerHandler.question16(Trigger.new,Trigger.oldMap);
             AccountTriggerHandler.question17(Trigger.new,Trigger.oldMap);
             AccountTriggerHandler.question19(Trigger.new,Trigger.oldMap);
-            AccountTriggerHandler.callContactAndUserUpdate(Trigger.new,Trigger.oldMap);
+            //AccountTriggerHandler.callContactAndUserUpdate(Trigger.new,Trigger.oldMap);
             if(Util.isExecute){
                 Util.isExecute = false;
-                AccountTriggerHandler.question40(Trigger.new,Trigger.oldMap);
+                //AccountTriggerHandler.question40(Trigger.new,Trigger.oldMap);
                 
             }
             AccountTriggerHandler.question42(Trigger.new,Trigger.oldMap);      
